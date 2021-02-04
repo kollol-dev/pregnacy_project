@@ -1,12 +1,13 @@
+<?php
+
 Route::group(
-[
-'as' => 'doctor.',
-'namespace' => 'Doctor',
-'prefix' => 'doctor',
-],
-function () {
+    [
+        'as' => 'doctor.',
+        'namespace' => 'Doctor',
+        'prefix' => 'doctor',
+    ],
+    function () {
 
-include_once 'dashboard/dashboard.php';
-
-}
+        include_once 'dashboard/dashboard.php';
+    }
 );
