@@ -36,7 +36,7 @@ class QuestionController extends Controller
             'user_id' => Auth::user()->id
         ]);
 
-        return view('/question/single' . $question->id)->with('question', $question);
+        return redirect('/questions/single/' . $question->id);
     }
 
 
