@@ -11,3 +11,4 @@ Route::group(
         include_once 'dashboard/dashboard.php';
     }
 );
+

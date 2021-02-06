@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Dashboard;
 
+use App\Models\User;
+
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -82,5 +85,32 @@ class DashboardController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+
+
+    public function getDoctors()
+    {
+        $doctors = User::where('role', 'doctor')->get();
+        return view('admin.dashboard.doctor')->with('doctors', $doctors);
+    }
+
+
+
+    public function addDoctor(Request $request)
+    {
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'role' => 'doctor'
+        ]);
+
+        return redirect('/admin/dashboard/doctor');
     }
 }

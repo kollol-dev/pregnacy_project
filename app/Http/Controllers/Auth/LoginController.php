@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 use Auth;
 
+use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -38,9 +40,10 @@ class LoginController extends Controller
         if (Auth::check() && Auth::user()->role == 'admin') {
             $this->redirectTo = route('admin.dashboard.index');
         } elseif (Auth::check() && Auth::user()->role == 'doctor') {
-            $this->redirectTo = route('shop.dashboard.index');
+            $this->redirectTo = route('welcome');
         } elseif (Auth::check() && Auth::user()->role == 'patient') {
-            $this->redirectTo = route('reseller.dashboard.index');
+            // $this->redirectTo = route('patient.dashboard.index');
+            $this->redirectTo = route('welcome');
         } else {
             $this->redirectTo = route('welcome');
         }
@@ -55,9 +58,10 @@ class LoginController extends Controller
         if (Auth::check() && Auth::user()->role == 'admin') {
             $redirectTo = 'admin.dashboard.index';
         } elseif (Auth::check() && Auth::user()->role == 'doctor') {
-            $redirectTo = 'doctor.dashboard.index';
+            $redirectTo = 'welcome';
         } elseif (Auth::check() && Auth::user()->role == 'patient') {
-            $redirectTo = 'patient.dashboard.index';
+            // $redirectTo = 'patient.dashboard.index';
+            $redirectTo = 'welcome';
         } else {
             $redirectTo = 'welcome';
         }
@@ -66,10 +70,10 @@ class LoginController extends Controller
         return $redirectTo;
     }
 
-    // Login with Mobile or email
+    // Login with email
     public function loginWithEmailOrMobile(Request $request)
     {
-        // dd($request);
+
         $this->validate($request, array(
             'email' => 'required | string | max:191',
             'password' => 'required | string | min:8',

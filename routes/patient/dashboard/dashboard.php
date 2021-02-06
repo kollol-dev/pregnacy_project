@@ -1,11 +1,6 @@
 <?php
 
 // Customer Routes
-Route::group([
-'as' => 'dashboard.',
-'prefix' => 'dashboard',
-],
-function(){
-Route::get('/', 'DashboardController@index')->name('index');
-}
-);
+Route::group(['as' => 'dashboard.', 'namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
+    Route::get('/', 'DashboardController@index')->name('index');
+});

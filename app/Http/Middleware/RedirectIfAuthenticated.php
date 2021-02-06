@@ -17,16 +17,14 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
-        }
-
+        
         if (Auth::guard($guard)->check() && Auth::user()->role == 'admin') {
-            return redirect()->route('superadmin.dashboard.index');
-        } elseif (Auth::guard($guard)->check() && Auth::user()->role == 'doctor') {
             return redirect()->route('admin.dashboard.index');
+        } elseif (Auth::guard($guard)->check() && Auth::user()->role == 'doctor') {
+            return redirect()->route('welcome');
         } elseif (Auth::guard($guard)->check() && Auth::user()->role == 'patient') {
-            return redirect()->route('university.dashboard.index');
+            return redirect()->route('welcome');
+            // return redirect()->route('patient.dashboard.index');
         } else{
             return $next($request);
         }
