@@ -33,8 +33,6 @@ Route::get('/questions/add', function () {
 })->name('question_add');
 
 
-// Route::get('/', 'HomeController@welcome')->name('welcome');
-
 
 /*===================================
 ========< admin Routes >=======
