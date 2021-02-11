@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -34,6 +35,7 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-        return view('welcome');
+        $blogs = Blog::orderBy('id', 'desc')->limit('3')->get();
+        return view('welcome', compact(['blogs']));
     }
 }

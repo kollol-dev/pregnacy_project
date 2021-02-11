@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-// models 
+// models
 use App\Models\Question;
 use App\Models\QuestionComment;
 use App\Models\QuestionCommentReply;
@@ -16,7 +16,7 @@ class QuestionController extends Controller
     public function getAllQuestions()
     {
 
-        $questions = Question::all();
+        $questions = Question::with('user')->paginate(1);
         return view('question')->with('questions', $questions);
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Dashboard;
 
 use App\Models\User;
+use App\Models\Blog;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -17,8 +18,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.dashboard.index');
+        $doctors = User::where('role', 'doctor')->limit(10)->orderBy('id', 'desc')->get();
+        $patients = User::where('role', 'doctor')->limit(10)->orderBy('id', 'desc')->get();
+        $blogs = Blog::limit(10)->orderBy('id', 'desc')->get();
+
+        return view('admin.dashboard.index', compact(['doctors', 'patients', 'blogs']));
     }
 
     /**
@@ -102,6 +106,14 @@ class DashboardController extends Controller
     public function addDoctor(Request $request)
     {
 
+        $this->validate($request, array(
+            'name'  => 'required | string | max:255',
+            'email' => 'required | string | email | max:191 | unique:users',
+            'password'  => 'required | string | max:255',
+            'phone'  => 'required | string | max:11',
+            'address'  => 'required | string | max:500'
+        ));
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -110,6 +122,19 @@ class DashboardController extends Controller
             'address' => $request->address,
             'role' => 'doctor'
         ]);
+
+        return redirect('/admin/dashboard/doctor');
+    }
+
+
+
+    public function addDoctorBlade()
+    {
+        return view('admin.dashboard.create-doctor');
+    }
+
+    public function deleteDoctorBlade($id){
+        User::where('id', $id)->delete();
 
         return redirect('/admin/dashboard/doctor');
     }

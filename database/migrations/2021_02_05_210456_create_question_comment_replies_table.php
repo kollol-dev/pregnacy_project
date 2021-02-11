@@ -15,8 +15,9 @@ class CreateQuestionCommentRepliesTable extends Migration
     {
         Schema::create('question_comment_replies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('question_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->bigInteger('question_comment_id')->unsigned();
             $table->integer('question_comment_id');
             $table->text('comment');
             $table->timestamps();
