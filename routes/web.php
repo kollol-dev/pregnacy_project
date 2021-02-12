@@ -26,6 +26,8 @@ Route::get('/questions', 'QuestionController@getAllQuestions')->name('question')
 Route::get('/questions/single/{id}', 'QuestionController@getQuestionById')->name('question-single');
 
 
+Route::get('/blogs', 'HomeController@getAllBlog')->name('all-blog');
+
 Route::get('/questions/add', function () {
     return view('question_add');
 })->name('question_add');

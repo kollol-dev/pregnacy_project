@@ -16,7 +16,7 @@ class QuestionController extends Controller
     public function getAllQuestions()
     {
 
-        $questions = Question::with('user')->paginate(1);
+        $questions = Question::with('user')->paginate(20);
         return view('question')->with('questions', $questions);
     }
 

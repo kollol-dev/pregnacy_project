@@ -42,7 +42,7 @@ class BlogController extends Controller
     {
         $this->validate($request, array(
             'title'  => 'required | string | max:255',
-            'description'  => 'required | string | max:500'
+            'description'  => 'required | string | max:5000'
         ));
 
         Blog::create([
@@ -98,4 +98,5 @@ class BlogController extends Controller
         Blog::where('id', $id)->delete();
         return redirect()->route('admin.blog.index');
     }
+
 }

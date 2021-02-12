@@ -38,4 +38,10 @@ class HomeController extends Controller
         $blogs = Blog::orderBy('id', 'desc')->limit('3')->get();
         return view('welcome', compact(['blogs']));
     }
+
+
+    public function getAllBlog(){
+        $blogs = Blog::paginate(20);
+        return view('blog', compact(['blogs']));
+    }
 }
