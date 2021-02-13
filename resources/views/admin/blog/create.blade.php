@@ -27,6 +27,7 @@
                 </div>
             </div>
             <!-- add modal end -->
+            
             <div class="module-option clearfix">
                 <form action="{{  route('admin.blog.store') }}" method="post">
                     @csrf

@@ -35,7 +35,8 @@ Route::get('/questions/add', function () {
 
 
 
-Route::get('/service/{get_input}', 'HomeController@getService')->name('get-service');
+Route::get('/service/add', 'HomeController@getService')->name('get-service');
+Route::get('/service/get/result/{id}', 'HomeController@getResult')->name('get-service-result');
 
 
 /*===================================

@@ -9,7 +9,7 @@ Route::group(['as' => 'dashboard.', 'namespace' => 'Dashboard', 'prefix' => 'das
     Route::get('/doctor/delete/{id}', 'DashboardController@deleteDoctorBlade')->name('delete-doctor');
 
 
-
+    Route::get('/services', 'DashboardController@getServices')->name('get-services');
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Dashboard;
 
 use App\Models\User;
 use App\Models\Blog;
+use App\Models\Service;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -133,9 +134,17 @@ class DashboardController extends Controller
         return view('admin.dashboard.create-doctor');
     }
 
-    public function deleteDoctorBlade($id){
+    public function deleteDoctorBlade($id)
+    {
         User::where('id', $id)->delete();
 
         return redirect('/admin/dashboard/doctor');
+    }
+
+
+    public function getServices()
+    {
+        $services = Service::with('patient')->get();
+        return view('admin.service.service', compact(['services']));
     }
 }

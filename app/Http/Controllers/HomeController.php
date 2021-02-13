@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -52,8 +53,19 @@ class HomeController extends Controller
         return view('blog', compact(['blog']));
     }
 
-    public function getService($get_input)
+    // public function getService($get_input)
+    // {
+    //     return view('service', compact(['get_input']));
+    // }
+    public function getService()
     {
-        return view('service', compact(['get_input']));
+        return view('service');
+    }
+
+
+    public function getResult($id)
+    {
+        $service = Service::where('id', $id)->with('patient')->first();
+        return view('service-result', compact(['service']));
     }
 }

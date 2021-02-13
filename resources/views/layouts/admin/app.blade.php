@@ -65,7 +65,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="{{ Request::is('admin/dashboard/patient_services') ? 'active' : '' }}"  href="/admin/dashboard/patient_services">
+                                <a class="{{ Request::is('admin/dashboard/services') ? 'active' : '' }}"  href="/admin/dashboard/services">
                                     <i class="menu-icon icon-bullhorn"></i>Patient Services
                                 </a>
                             </li>
