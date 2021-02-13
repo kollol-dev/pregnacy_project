@@ -40,8 +40,20 @@ class HomeController extends Controller
     }
 
 
-    public function getAllBlog(){
+    public function getAllBlog()
+    {
         $blogs = Blog::paginate(20);
         return view('blog', compact(['blogs']));
+    }
+
+    public function getAllBlogById($id)
+    {
+        $blog = Blog::where('id', $id)->first();
+        return view('blog', compact(['blog']));
+    }
+
+    public function getService($get_input)
+    {
+        return view('service', compact(['get_input']));
     }
 }

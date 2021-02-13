@@ -25,7 +25,7 @@
 
             <div class="col-md-4 ftco-animate">
                 <div class="blog-entry">
-                    <a href="/questions/single/{{ $blog->id }}" class="block-20" style="background-image: url('{{ $key % 2 == 0 ? 'images/pregnant_background.jpg' : 'images/pregnant_background2.jpg' }}');">
+                    <a href="/blogs/single/{{ $blog->id }}" class="block-20" style="background-image: url('{{ $key % 2 == 0 ? 'images/pregnant_background.jpg' : 'images/pregnant_background2.jpg' }}');">
                         <div class="meta-date text-center p-2">
                             @php
                             $date = new DateTime($blog->created_at);
@@ -41,7 +41,7 @@
                         <p>{{ strlen($blog->description) > 200 ? substr($blog->description, 0, 200) . '...' : $blog->description }}
                         </p>
                         <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="/questions/single/{{ $blog->id }}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                            <p class="mb-0"><a href="/blogs/single/{{ $blog->id }}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
                                 <a href="#" class="mr-2">{{ isset($blog->user) ? $blog->user->name : 'Patient' }}</a>
                                 <a href="#" class="meta-chat"></a>

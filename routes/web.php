@@ -27,11 +27,15 @@ Route::get('/questions/single/{id}', 'QuestionController@getQuestionById')->name
 
 
 Route::get('/blogs', 'HomeController@getAllBlog')->name('all-blog');
+Route::get('/blogs/single/{id}', 'HomeController@getAllBlogById')->name('blog-sinlge');
 
 Route::get('/questions/add', function () {
     return view('question_add');
 })->name('question_add');
 
+
+
+Route::get('/service/{get_input}', 'HomeController@getService')->name('get-service');
 
 
 /*===================================
