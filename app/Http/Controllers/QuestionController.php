@@ -67,6 +67,8 @@ class QuestionController extends Controller
             'comment' => $request->comment
         ]);
 
+        
+
         return redirect('/questions/single/' . $request->question_id);
     }
 

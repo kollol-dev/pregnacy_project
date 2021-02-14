@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\User;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,18 @@ class HomeController extends Controller
     public function welcome()
     {
         $blogs = Blog::orderBy('id', 'desc')->limit('3')->get();
+
+        // if (Auth::check()) {
+
+        //     $user = User::find(Auth::user()->id);
+
+        //     foreach ($user->notifications as $notification) {
+        //         echo $notification->type;
+        //     }
+
+
+        //     return view('welcome', compact(['blogs', 'user']));
+        // }
         return view('welcome', compact(['blogs']));
     }
 

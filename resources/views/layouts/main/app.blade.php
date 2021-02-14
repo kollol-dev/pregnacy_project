@@ -61,7 +61,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
-            <p class="button-custom order-lg-last mb-0">
+            <div class="button-custom order-lg-last mb-0">
                 @if (!Auth::check())
                 <a class="btn btn-secondary py-2 px-3" href="/login">Login</a>
                 <a class="btn btn-secondary py-2 px-3" href="/register">Register</a>
@@ -77,13 +77,43 @@
                                                      document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
 
-            @endif
-            </a>
-            </p>
+                <div class="dropdown" style="float: right; margin: 10px;">
+                    <a class=" dropdown-toggle" href="#" role="button">
+                        <span class="icon-bell"></span>
+                    </a>
+                    @foreach(Auth::user()->notifications as $notification)
+                    <ul class="dropdown-menu show">
+                        <li class="notification-box">
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-3 col-3 text-center">
+                                        <img src="/images/male.jpg" class="w-50 rounded-circle">
+                                    </div>
+                                    <div class="col-lg-8 col-sm-8 col-8" style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;">
+                                        <!-- <strong class="text-info">Dr.Care</strong> -->
+                                        <p>
+                                        @php
+                                            echo html_entity_decode($notification['data']['message']) 
+                                        @endphp
+                                        </p>
+                                        <p style="color:#ff8000 !important">
+                                            <small class="text-warning">{{ $notification['created_at'] }}</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    @endforeach
+                </div>
+
+                @endif
+                </a>
+            </div>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
@@ -98,23 +128,6 @@
                     @if (Auth::check() && Auth::user()->role == 'patient')
                     <li class="{{ Request::is('service/get/profile') || Request::is('service/result/get/{id}')? 'nav-item active' : 'nav-item' }}"><a href="/service/get/profile" class="nav-link">History</a></li>
                     @endif
-                    <!-- for notification -->
-                    <!-- <li class="nav-item">
-      <a href="/login" class="nav-link">
-       <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-         <a class="dropdown-item" href="#">Action</a>
-         <a class="dropdown-item" href="#">Another action</a>
-         <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-       </div>
-      </a>
-     </li> -->
-                    <!-- for notification -->
-
                 </ul>
             </div>
         </div>
@@ -143,7 +156,6 @@
                             <li><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
                             <li><a href="/service/add"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
                             <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
-                            <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,7 +169,7 @@
                         @endphp
                         @foreach ($recents as $key => $blog)
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url('{{ $key % 2 == 0 ? asset('images/pregnant_background.jpg') : asset('images/pregnant_background2.jpg') }}');"></a>
+                            <a class="blog-img mr-4" style="background-image: url('{{ $key % 2 == 0 ? asset("images/pregnant_background.jpg") : asset("images/pregnant_background2.jpg") }}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="/blogs/{{ $blog->id }}">{{ $blog->title }}</a>
                                 </h3>
@@ -199,6 +211,60 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
         </svg></div>
 
+    <style>
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background-color: #17A2B8;
+        }
+
+        .dropdown-menu {
+            top: 60px;
+            right: 0px;
+            left: unset;
+            width: 460px;
+            box-shadow: 0px 5px 7px -1px #c1c1c1;
+            padding-bottom: 0px;
+            padding: 0px;
+        }
+
+        .dropdown-menu:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: 12px;
+            border: 10px solid #343A40;
+            border-color: transparent transparent #343A40 transparent;
+        }
+
+        .notification-box {
+            padding: 10px 0px;
+        }
+
+        .bg-gray {
+            background-color: #eee;
+        }
+
+        @media (max-width: 640px) {
+            .dropdown-menu {
+                top: 50px;
+                left: -16px;
+                width: 290px;
+            }
+
+            .nav {
+                display: block;
+            }
+
+            .nav .nav-item,
+            .nav .nav-item a {
+                padding-left: 0px;
+            }
+
+            .message {
+                font-size: 13px;
+            }
+        }
+    </style>
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>

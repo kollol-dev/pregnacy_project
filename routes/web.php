@@ -49,7 +49,7 @@ Route::get('/service/get/profile/', 'HomeController@getResultByPatient')->name('
 
 Route::get('/article/1st-trimeseter', 'HomeController@getArticle1st');
 Route::get('/article/2nd-trimeseter', 'HomeController@getArticle2nd');
-Route::get('/article/3rd-trimeseter', 'HomeController@getArticle3nd');
+Route::get('/article/3rd-trimeseter', 'HomeController@getArticle3rd');
 
 
 

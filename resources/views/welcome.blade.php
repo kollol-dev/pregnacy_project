@@ -39,9 +39,8 @@
                         <span class="flaticon-doctor"></span>
                     </div>
                     <div class="media-body p-2 mt-3">
-                        <h3 class="heading">Qualitfied Doctors</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <h3 class="heading">Reliable Platform</h3>
+                        <p>Discussions on pregnancy and child rearing, awareness writing, and general knowledge </p>
                     </div>
                 </div>
             </div>
@@ -52,8 +51,7 @@
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">Emergency Care</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <p>Helps pregnant mothers know what to do at different stages of their pregnancy and encourage them to have a baby through normal delivery.</p>
                     </div>
                 </div>
             </div>
@@ -63,9 +61,8 @@
                         <span class="flaticon-stethoscope"></span>
                     </div>
                     <div class="media-body p-2 mt-3">
-                        <h3 class="heading">Outdoor Checkup</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <h3 class="heading">Risk Acknowledgement</h3>
+                        <p>Be aware of the serious risks of cesarean operation</p>
                     </div>
                 </div>
             </div>
@@ -76,8 +73,7 @@
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">24 Hours Service</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <p>Consult an experienced doctor through Q&A 24/7</p>
                     </div>
                 </div>
             </div>
@@ -99,47 +95,9 @@
                     </div>
                 </div>
                 <div class="pl-md-5 ml-md-5 mb-5">
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin
-                        would be the word.</p>
-                    <div class="row mt-5 pt-2">
-                        <div class="col-lg-6">
-                            <div class="services-2 d-flex">
-                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-first-aid-kit"></span></div>
-                                <div class="text">
-                                    <h3>Primary Care</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="services-2 d-flex">
-                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-dropper"></span></div>
-                                <div class="text">
-                                    <h3>Lab Test</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="services-2 d-flex">
-                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-experiment-results"></span></div>
-                                <div class="text">
-                                    <h3>Symptom Check</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="services-2 d-flex">
-                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-heart-rate"></span></div>
-                                <div class="text">
-                                    <h3>Heart Rate</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>‘Apa's main objective is to create a reliable platform for Bangladeshi and Bengali-speaking expectant mothers to have discussions on pregnancy and child rearing, awareness writing, and general knowledge - which mothers will learn about caring for their unborn child through regular reading.
+                        It is one of the most timely, informative and objective webpages for Bengali speakers. ‘Apa’ is an online platform that will help pregnant mothers know what to do at different stages of their pregnancy and encourage them to have a baby through normal delivery.
+                    </p>
                 </div>
             </div>
         </div>
@@ -167,11 +125,8 @@
                         <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">3rd Trimeseter</a>
 
                         <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Videso</a>
-                       
+
                         <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Food Habits & Lifestyle</a>
-
-
-
 
                     </div>
                 </div>
@@ -186,7 +141,10 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <h2>1st Trimeseter </h2>
-                                    <p>Your first visit will focus on assessing your overall health, identifying any risk factors and determining your baby's gestational age. Your health care provider will ask detailed questions about your health history. Be honest. If you're uncomfortable discussing your health history in front of your partner.</p>
+                                    <p>Your first visit will focus on assessing your overall health, identifying any risk factors
+                                        and determining your baby's gestational age. Your health care provider will ask detailed questions
+                                        about your health history. Be honest. If you're uncomfortable discussing your health history in
+                                        front of your partner.</p>
 
                                     <a href="/article/1st-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
                                 </div>
@@ -201,18 +159,19 @@
                                     <div class="img d-flex align-self-stretch" style="background-image: url(images/background1.jpg);"></div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2>Surgical Deparments</h2>
-                                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where
-                                        it came from it would have been rewritten a thousand times and everything
-                                        that was left from its origin would be the word.</p>
-                                
-                                        <a href="/article/2nd-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
+                                    <h2>2nd Trimeseter</h2>
+                                    <p>You might feel these mild, irregular contractions as a slight tightness in your abdomen.
+                                        They're more likely to occur in the afternoon or evening, after physical activity. Contact your health
+                                        care provider if the contractions become regular and steadily increase in strength. This could be a
+                                        sign of preterm labor.</p>
+
+                                    <a href="/article/2nd-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
 
                                 </div>
                             </div>
                         </div>
                         <!-- 2nd -->
-                        
+
                         <!-- 3rd -->
 
                         <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
@@ -221,13 +180,15 @@
                                     <div class="img d-flex align-self-stretch" style="background-image: url(images/background1.jpg);"></div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2>Dental Deparments</h2>
-                                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where
-                                        it came from it would have been rewritten a thousand times and everything
-                                        that was left from its origin would be the word.</p>
-                                
-                                        <a href="/article/3rd-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
-                                
+                                    <h2>3rd Trimeseter</h2>
+                                    <p>The third trimester marks the home stretch, as you get ready for the birth of your baby.
+                                        The fetus continues to grow in weight and size, and the body systems finish maturing.
+                                        You may feel more uncomfortable now. You will continue to gain weight and begin to have false
+                                        labor contractions (Braxton-Hicks contractions).
+                                    </p>
+
+                                    <a href="/article/3rd-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
+
                                 </div>
                             </div>
                         </div>
@@ -244,8 +205,8 @@
                                     <p>On her way she met a copy. The copy warned the Little Blind Text, that where
                                         it came from it would have been rewritten a thousand times and everything
                                         that was left from its origin would be the word.</p>
-                                        <a href="/article/1st-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
-                                
+                                    <a href="/article/1st-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
+
                                 </div>
                             </div>
                         </div>
@@ -262,8 +223,8 @@
                                     <p>On her way she met a copy. The copy warned the Little Blind Text, that where
                                         it came from it would have been rewritten a thousand times and everything
                                         that was left from its origin would be the word.</p>
-                                        <a href="/article/1st-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
-                                
+                                    <a href="/article/1st-trimeseter" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
+
                                 </div>
                             </div>
                         </div>
@@ -290,7 +251,7 @@
             @foreach ($blogs as $key => $blog)
             <div class="col-md-4 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('{{ $key % 2 == 0 ? asset('images/pregnant_background.jpg') : asset('images/pregnant_background2.jpg') }}');">
+                    <a  href="/blogs/single/{{ $blog->id }}" class="block-20" style="background-image: url('{{ $key % 2 == 0 ? asset('images/pregnant_background.jpg') : asset('images/pregnant_background2.jpg') }}');">
                         <div class="meta-date text-center p-2">
                             @php
                             $date = new DateTime($blog->created_at);

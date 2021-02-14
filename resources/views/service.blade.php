@@ -23,7 +23,7 @@
             <div class="col-lg-12 ftco-animate">
                 <div class="comment-form-wrap pt-5">
                     <h3 class="mb-5 h4 font-weight-bold">Please provide necessary information</h3>
-                    <form action="/app/patient/service/add-stat" method="post" class="p-5 bg-light">
+                    <form action="/patient/service/add-stat" method="post" class="p-5 bg-light">
                         @csrf
 
                         <div class="form-group">
@@ -232,7 +232,6 @@
         </div>
     </div>
 </section>
-
 
 @endsection
 

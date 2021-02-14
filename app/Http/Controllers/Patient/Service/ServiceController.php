@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Patient;
+namespace App\Http\Controllers\Patient\Service;
 
 // models
 use App\Models\Service;
@@ -13,7 +13,6 @@ class ServiceController extends Controller
 {
     public function addService(Request $request)
     {
-        return true;
 
         $this->validate($request, array(
             'pregnancy_week'  => 'required | string',
@@ -92,6 +91,7 @@ class ServiceController extends Controller
         ) {
             $result = 'Since you are now 2nd trimester, you have high blood pressure, you have proteinuria so, you have high risk to eclampsia. ';
         }
+
 
 
         $service = Service::create([

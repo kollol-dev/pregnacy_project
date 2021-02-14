@@ -12,22 +12,20 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">1st Triemeseter</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span></span></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="ftco-section ftco-no-pt ftc-no-pb">
+<section class="ftco-section ftco-no-pt ftc-no-pb mt-3">
     <div class="container">
         <div class="row no-gutters">
             <ul>
                 <li>
-                    <p align="center"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>Normal Changes:</strong></u></span></span></p>
+                    <p align="center"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>Normal Changes: </strong></u>While your first sign of pregnancy might have been a missed period, you can expect several other physical changes in the coming weeks, including:</span></span></p>
                 </li>
-            </ul>
-            <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">While your first sign of pregnancy might have been a missed period, you can expect several other physical changes in the coming weeks, including:</span></span></p>
-            <ul>
+
                 <li>
                     <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>Tender, swollen breasts</strong></u></span></span><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><strong>.</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">&nbsp;Soon after conception, hormonal changes might make your breasts sensitive or sore. The discomfort will likely decrease after a few weeks as your body adjusts to hormonal changes.</span></span></p>
                 </li>

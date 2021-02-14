@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+
 use Auth;
+use App\Notifications\CheckupAlert;
 
 use Illuminate\Http\Request;
 
@@ -80,6 +82,14 @@ class LoginController extends Controller
         ));
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+
+            // if(){
+                $user = Auth::user();
+                $user->notify(new CheckupAlert('Please do your check up'));
+            // }
+
+
+
             return redirect()->route($this->redirectAuth());
         } else {
             // toast('Does not match login Credentials', 'error')->autoClose(2000)->timerProgressBar();

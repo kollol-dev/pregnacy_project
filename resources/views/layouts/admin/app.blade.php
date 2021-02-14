@@ -28,8 +28,14 @@
                 <div class="nav-collapse collapse navbar-inverse-collapse">
 
                     <ul class="nav pull-right">
-                        <li><a href="/logout">Logout </a></li>
+                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout </a></li>
                     </ul>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    </a>
+
                 </div>
                 <!-- /.nav-collapse -->
             </div>
@@ -55,23 +61,23 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="{{ Request::is('admin/dashboard/doctor') ? 'active' : '' }}"  href="{{ route('admin.dashboard.doctor') }}">
+                                <a class="{{ Request::is('admin/dashboard/doctor') ? 'active' : '' }}" href="{{ route('admin.dashboard.doctor') }}">
                                     <i class="menu-icon icon-bullhorn"></i>Doctors
                                 </a>
                             </li>
                             <li>
-                                <a class="{{ Request::is('admin/patient') ? 'active' : '' }}"  href="/admin/patient">
+                                <a class="{{ Request::is('admin/patient') ? 'active' : '' }}" href="/admin/patient">
                                     <i class="menu-icon icon-bullhorn"></i>Patients
                                 </a>
                             </li>
                             <li>
-                                <a class="{{ Request::is('admin/dashboard/services') ? 'active' : '' }}"  href="/admin/dashboard/services">
+                                <a class="{{ Request::is('admin/dashboard/services') ? 'active' : '' }}" href="/admin/dashboard/services">
                                     <i class="menu-icon icon-bullhorn"></i>Patient Services
                                 </a>
                             </li>
                             <li>
                                 <a class="{{ Request::is('admin/blog
-                                ') ? 'active' : '' }}"  href="/admin/blog
+                                ') ? 'active' : '' }}" href="/admin/blog
                                 ">
                                     <i class="menu-icon icon-bullhorn"></i>Blogs
                                 </a>
