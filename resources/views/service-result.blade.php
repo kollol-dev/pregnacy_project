@@ -26,6 +26,9 @@
                     <div>
                         <h3 class="mb-5 h4 font-weight-bold">Thank you for providing your information. You possible expected result in shown below: </h3>
                     </div>
+
+                    <p>Patient: {{ $service->patient->name }}</p>
+                    <p>Date: {{ $service->created_at }}</p>
                     <div class="d-flex justify-content-center font-weight-bold mb-5">
                         <h4 style="border: 4px solid #e7e7e7;padding: 10px;">{{ $service->result }}</h4>
                     </div>

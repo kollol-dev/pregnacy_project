@@ -25,7 +25,7 @@
 
                 <p>{{ $question->detailed_question }}</p>
                 <div class="about-author d-flex p-4 bg-light">
-                    <div class="bio mr-5">
+                    <div class="bio mr-5" style="width: 100px;">
                         <img src="/images/male.jpg" alt="Image placeholder" class="img-fluid mb-4">
                     </div>
                     <div class="desc">

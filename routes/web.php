@@ -37,6 +37,28 @@ Route::get('/questions/add', function () {
 
 Route::get('/service/add', 'HomeController@getService')->name('get-service');
 Route::get('/service/get/result/{id}', 'HomeController@getResult')->name('get-service-result');
+Route::get('/service/get/profile/', 'HomeController@getResultByPatient')->name('get-service-by-patient');
+
+
+
+
+
+
+
+
+
+Route::get('/article/1st-trimeseter', 'HomeController@getArticle1st');
+Route::get('/article/2nd-trimeseter', 'HomeController@getArticle2nd');
+Route::get('/article/3rd-trimeseter', 'HomeController@getArticle3nd');
+
+
+
+
+
+
+
+
+
 
 
 /*===================================

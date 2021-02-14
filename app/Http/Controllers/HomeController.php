@@ -6,6 +6,8 @@ use App\Models\Blog;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
+use Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -50,7 +52,7 @@ class HomeController extends Controller
     public function getAllBlogById($id)
     {
         $blog = Blog::where('id', $id)->first();
-        return view('blog', compact(['blog']));
+        return view('blog-single', compact(['blog']));
     }
 
     // public function getService($get_input)
@@ -59,6 +61,12 @@ class HomeController extends Controller
     // }
     public function getService()
     {
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+        if (Auth::user()->role != 'patient') {
+            return redirect("/");
+        }
         return view('service');
     }
 
@@ -67,5 +75,33 @@ class HomeController extends Controller
     {
         $service = Service::where('id', $id)->with('patient')->first();
         return view('service-result', compact(['service']));
+    }
+
+
+    public function getResultByPatient()
+    {
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+        $services = Service::where('patient_id', Auth::user()->id)->get();
+        return view('service-profile')->with('services', $services);
+    }
+
+
+
+
+    public function getArticle1st()
+    {
+        return view('1st-trimester');
+    }
+
+    public function getArticle2nd()
+    {
+        return view('2nd-trimester');
+    }
+
+    public function getArticle3rd()
+    {
+        return view('3rd-trimester');
     }
 }

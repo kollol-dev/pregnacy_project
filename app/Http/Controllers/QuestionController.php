@@ -24,14 +24,10 @@ class QuestionController extends Controller
     // ask a question
     public function addQuestion(Request $request)
     {
-
-        if(!isset($request->title)){
-            return view('question')->with('error', $error['title'] = true);
-        }
-        
-        if(!isset($request->title)){
-            return view('question')->with('error', $error['title'] = true);
-        }
+        $this->validate($request, array(
+            'title'  => 'required | string',
+            'description'  => 'required | string',
+        ));
 
 
         $question = Question::create([

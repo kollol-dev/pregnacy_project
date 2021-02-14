@@ -90,10 +90,14 @@
                     <li class="{{ Request::is('/') ? 'nav-item active' : 'nav-item' }}"><a href="/" class="nav-link pl-0">Home</a></li>
                     <li class="{{ Request::is('about') ? 'nav-item active' : 'nav-item' }}"><a href="/about" class="nav-link">About</a></li>
                     <li class="{{ Request::is('questions') ? 'nav-item active' : 'nav-item' }}"><a href="/questions" class="nav-link">Questions</a></li>
+                    @if (Auth::check() && Auth::user()->role == 'patient')
                     <li class="{{ Request::is('service') ? 'nav-item active' : 'nav-item' }}"><a href="/service/add" class="nav-link">Service</a></li>
+                    @endif
                     <li class="{{ Request::is('blogs') ? 'nav-item active' : 'nav-item' }}"><a href="/blogs" class="nav-link">Blogs</a></li>
                     <li class="{{ Request::is('contact') ? 'nav-item active' : 'nav-item' }}"><a href="/contact" class="nav-link">Contact</a></li>
-
+                    @if (Auth::check() && Auth::user()->role == 'patient')
+                    <li class="{{ Request::is('service/get/profile') || Request::is('service/result/get/{id}')? 'nav-item active' : 'nav-item' }}"><a href="/service/get/profile" class="nav-link">History</a></li>
+                    @endif
                     <!-- for notification -->
                     <!-- <li class="nav-item">
       <a href="/login" class="nav-link">
@@ -138,6 +142,7 @@
                             <li><a href="/"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
                             <li><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
                             <li><a href="/service/add"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                            <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
                             <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
                         </ul>
                     </div>

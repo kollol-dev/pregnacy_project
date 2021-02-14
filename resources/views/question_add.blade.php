@@ -31,14 +31,14 @@
           @csrf
           <div class="d-md-flex">
             <div class="form-group">
-              <input type="text" class="form-control" name="title" placeholder="Title">
+              <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="Title">
             </div>
           </div>
-          @if(isset($error->title))
-          <div class="alert alert-danger" role="alert">
-            Title is invalid or empty!
-          </div>
-          @endif
+          @error('title')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
           <!-- <div class="d-md-flex">
 	    					<div class="form-group">
 		    					<div class="form-field">
@@ -75,14 +75,14 @@
 	    				</div> -->
           <div class="d-md-flex">
             <div class="form-group">
-              <textarea cols="30" rows="8" class="form-control" name="description" placeholder="Description"></textarea>
+              <textarea cols="30" rows="8" class="form-control @error('description') is-invalid @enderror" name="description" placeholder="Description"></textarea>
             </div>
           </div>
-          @if(isset($error->description))
-          <div class="alert alert-danger" role="alert">
-            Description is invalid or empty!
-          </div>
-          @endif
+          @error('description')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
 
           <div class="d-md-flex">
             <div class="form-group ml-md-4">
