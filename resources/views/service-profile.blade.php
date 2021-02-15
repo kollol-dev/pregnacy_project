@@ -27,6 +27,7 @@
                         @foreach($services as $service)
                         <li>
                             <a href="{{ '/service/get/result/'.$service->id }}">{{ $service->result }}</a>
+                            <p>Submition time: {{ $service->created_at }}</p>
                         </li>
                         @endforeach
                     </ul>

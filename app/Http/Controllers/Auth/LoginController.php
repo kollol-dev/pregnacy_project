@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use Auth;
 use App\Notifications\CheckupAlert;
+use App\Models\Service;
 
 use Illuminate\Http\Request;
-
+use DateTime;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -83,10 +84,58 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
+
+            // • First Visit		-8-12 Weeks
+            // • Second Visit		- 20 weeks
+            // • Third visit: 		-24 week
+            // • 4rth Visit		- 30 Weeks
+            // • 5th Visit		-34 weeks
+            // • 6th  Visit		- 36 weeks
+            // • 7th visit 		-37-40 weeks 
+
+
+
+
+
             // if(){
-                $user = Auth::user();
-                $user->notify(new CheckupAlert('Please do your check up'));
+            $user = Auth::user();
+            $service = Service::where('patient_id', $user->id)->orderBy('id', 'desc')->first();
+
+            if (!isset($service)) {
+                return redirect()->route($this->redirectAuth());
+            }
+            $now = new DateTime();
+            $difference_in_weeks = floor($now->diff($service->created_at)->days / 7);
+
+
+            if ($difference_in_weeks + $service->pregnancy_week < 8) {
+                $week_remaining = 8 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            }
+            // if ($difference_in_weeks + $service->pregnancy_week < 12) {
+            //     $week_remaining = 12 - $difference_in_weeks + $service->pregnancy_week;
+            //     $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . $week_remaining > 1 ? 'weeks' : 'week'));
             // }
+
+            else if ($difference_in_weeks + $service->pregnancy_week < 20) {
+                $week_remaining = 20 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            } else if ($difference_in_weeks + $service->pregnancy_week < 25) {
+                $week_remaining = 25 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            } else if ($difference_in_weeks + $service->pregnancy_week < 30) {
+                $week_remaining = 30 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            } else if ($difference_in_weeks + $service->pregnancy_week < 34) {
+                $week_remaining = 34 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            } else if ($difference_in_weeks + $service->pregnancy_week < 36) {
+                $week_remaining = 36 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            } else if ($difference_in_weeks + $service->pregnancy_week < 37) {
+                $week_remaining = 37 - $difference_in_weeks + $service->pregnancy_week;
+                $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
+            }
 
 
 

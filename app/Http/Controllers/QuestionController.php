@@ -68,7 +68,7 @@ class QuestionController extends Controller
         ]);
 
         
-
+        
         return redirect('/questions/single/' . $request->question_id);
     }
 

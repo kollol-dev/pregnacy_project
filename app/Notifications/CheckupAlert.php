@@ -39,6 +39,8 @@ class CheckupAlert extends Notification
         $msg = "'<b>" . $this->noti_text . "</b>'";
         return [
             'message' => $msg,
+            'link' => 'http://localhost:8000/service/add'
+
             // 'admin' => $notifiable,
         ];
     }
@@ -48,6 +50,7 @@ class CheckupAlert extends Notification
         $msg = "'<b>" . $this->noti_text . "</b>'";
         return [
             'message' => $msg,
+            'link' => 'http://localhost:8000/service/add'
             // 'admin' => $notifiable,
         ];
     }
@@ -57,6 +60,8 @@ class CheckupAlert extends Notification
         $msg = "'<b>" . $this->noti_text . "</b>'";
         return [
             'message' => $msg,
+            'link' => 'http://localhost:8000/service/add'
+
             // 'admin' => $notifiable,
         ];
     }

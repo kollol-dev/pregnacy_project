@@ -28,7 +28,7 @@
 
                         <div class="form-group">
                             <label>You are now pregnant in week *</label>
-                            <input type="number" value="{{ old('pregnancy_week') }}" name="pregnancy_week" class="form-control @error('pregnancy_week') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->pregnancy_week) ?  $service->pregnancy_week : old('pregnancy_week') }}" name="pregnancy_week" class="form-control @error('pregnancy_week') is-invalid @enderror">
                         </div>
                         @error('pregnancy_week')
                         <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Your Age *</label>
-                            <input type="number" value="{{ old('age') }}" name="age" class="form-control @error('age') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->age) ?  $service->age : old('age') }}" name="age" class="form-control @error('age') is-invalid @enderror">
                         </div>
                         @error('age')
                         <span class="invalid-feedback" role="alert">
@@ -58,7 +58,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Your Height (in cm) *</label>
-                            <input type="number" value="{{ old('height') }}" name="height" class="form-control @error('height') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->height) ?  $service->height : old('height') }}" name="height" class="form-control @error('height') is-invalid @enderror">
                         </div>
                         @error('height')
                         <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Your Weight (in lbs)*</label>
-                            <input type="number" value="{{ old('weight') }}" name="weight" class="form-control @error('weight') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->weight) ?  $service->weight : old('weight') }}" name="weight" class="form-control @error('weight') is-invalid @enderror">
                         </div>
                         @error('weight')
                         <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Your BMI (before pregnancy) *</label>
-                            <input type="text" value="{{ old('bmi') }}" name="bmi" class="form-control @error('bmi') is-invalid @enderror">
+                            <input type="text" value="{{ ($service->bmi) ?  $service->bmi : old('bmi') }}" name="bmi" class="form-control @error('bmi') is-invalid @enderror">
                         </div>
                         @error('bmi')
                         <span class="invalid-feedback" role="alert">
@@ -206,7 +206,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Glucose Before Fasting (in mg/dl)*</label>
-                            <input type="number" value="{{ old('glucose_before_fasting') }}" name="glucose_before_fasting" class="form-control @error('glucose_before_fasting') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->pregnancy_week) ?  $service->glucose_before_fasting : old('glucose_before_fasting') }}" name="glucose_before_fasting" class="form-control @error('glucose_before_fasting') is-invalid @enderror">
                         </div>
                         @error('glucose_before_fasting')
                         <span class="invalid-feedback" role="alert">
@@ -215,7 +215,7 @@
                         @enderror
                         <div class="form-group">
                             <label>Glucose After Fasting (in mg/dl)*</label>
-                            <input type="number" value="{{ old('glucose_after_fasting') }}" name="glucose_after_fasting" class="form-control @error('glucose_after_fasting') is-invalid @enderror">
+                            <input type="number" value="{{ ($service->pregnancy_week) ?  $service->glucose_after_fasting : old('glucose_after_fasting') }}" name="glucose_after_fasting" class="form-control @error('glucose_after_fasting') is-invalid @enderror">
                         </div>
                         @error('glucose_after_fasting')
                         <span class="invalid-feedback" role="alert">

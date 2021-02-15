@@ -55,7 +55,7 @@ class NewQuestionAdd extends Notification
     public function toArray($notifiable)
     {
         $msg = "'<b>" . 'New Question Arrived' . "</b>'";
-        $link = route('welcome');
+        $link = route('question');
         return [
             'message' => $msg,
             'link' => $link,
@@ -72,7 +72,7 @@ class NewQuestionAdd extends Notification
     public function toDatabase($notifiable)
     {
         $msg = "'<b>" . 'New Question Arrived' . "</b>'";
-        $link = route('welcome');
+        $link = route('question');
         return [
             'message' => $msg,
             'link' => $link,
@@ -89,7 +89,7 @@ class NewQuestionAdd extends Notification
     public function toBroadcast($notifiable)
     {
         $msg = "'<b" . 'New Question Arrived' . "</b>'";
-        $link = route('welcome');
+        $link = route('question');
         return [
             'message' => $msg,
             'link' => $link,

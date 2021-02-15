@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dr.care</title>
+    <title>Apa - আপা</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,9 +35,9 @@
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-lg-2 pr-4 align-items-center">
-                    <a class="navbar-brand" href="/">Dr.<span>care</span></a>
+                    <a class="navbar-brand" href="/">Apa<span> আপা</span></a>
                 </div>
-                <div class="col-lg-10 d-none d-md-block">
+                <!-- <div class="col-lg-10 d-none d-md-block">
                     <div class="row d-flex">
                         <div class="col-md-4 pr-4 d-flex topper align-items-center">
                             <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
@@ -52,7 +52,7 @@
                             <span class="text">Phone: + 1235 2355 98</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
@@ -61,7 +61,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
-            <div class="button-custom order-lg-last mb-0">
+            <div class="button-custom order-lg-last mb-0 mt-2">
                 @if (!Auth::check())
                 <a class="btn btn-secondary py-2 px-3" href="/login">Login</a>
                 <a class="btn btn-secondary py-2 px-3" href="/register">Register</a>
@@ -82,33 +82,34 @@
                 </form>
 
                 <div class="dropdown" style="float: right; margin: 10px;">
-                    <a class=" dropdown-toggle" href="#" role="button">
+                    <!-- <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="icon-bell"></span>
                     </a>
-                    @foreach(Auth::user()->notifications as $notification)
-                    <ul class="dropdown-menu show">
-                        <li class="notification-box">
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-3 col-3 text-center">
-                                        <img src="/images/male.jpg" class="w-50 rounded-circle">
-                                    </div>
-                                    <div class="col-lg-8 col-sm-8 col-8" style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;">
-                                        <!-- <strong class="text-info">Dr.Care</strong> -->
-                                        <p>
-                                        @php
-                                            echo html_entity_decode($notification['data']['message']) 
-                                        @endphp
-                                        </p>
-                                        <p style="color:#ff8000 !important">
-                                            <small class="text-warning">{{ $notification['created_at'] }}</small>
-                                        </p>
-                                    </div>
+                    @php
+                    $notifications = auth()->user()->notifications()->limit(9)->get();
+                    @endphp
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        @foreach($notifications as $notification)
+                        <a href="{{ $notification->data['link'] }}">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-3 text-center">
+                                    <img src="/images/male.jpg" class="w-50 rounded-circle">
                                 </div>
-                            </a>
-                        </li>
-                    </ul>
-                    @endforeach
+                                <div class="col-lg-8 col-sm-8 col-8" style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;">
+                                    <span>
+                                        {!! $notification->data['message'] !!}
+                                    </span>
+                                    <p style="color:#ff8000 !important">
+                                        <small class="text-warning">{{ $notification['created_at'] }}</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        @endforeach
+                    </div>
+
                 </div>
 
                 @endif
@@ -143,7 +144,7 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2 logo">Dr.<span>care</span></h2>
+                        <h2 class="ftco-heading-2 logo">Apa - আপা</span></h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                             there live the blind texts.</p>
                     </div>
@@ -154,7 +155,9 @@
                         <ul class="list-unstyled">
                             <li><a href="/"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
                             <li><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                            @if (Auth::check() && Auth::user()->role == 'patient')
                             <li><a href="/service/add"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                            @endif
                             <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
                         </ul>
                     </div>

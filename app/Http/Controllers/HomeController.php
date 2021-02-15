@@ -80,7 +80,9 @@ class HomeController extends Controller
         if (Auth::user()->role != 'patient') {
             return redirect("/");
         }
-        return view('service');
+        $service = Service::where('patient_id', Auth::user()->id)->orderBy('id', 'desc')->first();
+
+        return view('service', compact(['service']));
     }
 
 
