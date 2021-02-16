@@ -123,7 +123,7 @@
                     <li class="{{ Request::is('about') ? 'nav-item active' : 'nav-item' }}"><a href="/about" class="nav-link">About</a></li>
                     <li class="{{ Request::is('questions') ? 'nav-item active' : 'nav-item' }}"><a href="/questions" class="nav-link">Questions</a></li>
                     @if (Auth::check() && Auth::user()->role == 'patient')
-                    <li class="{{ Request::is('service/add') ? 'nav-item active' : 'nav-item' }}"><a href="/service/add" class="nav-link">Checkup</a></li>
+                    <li class="{{ Request::is('service/add') ? 'nav-item active' : 'nav-item' }}"><a href="/service/add" class="nav-link">Check Up</a></li>
                     @endif
                     <li class="{{ Request::is('blogs') ? 'nav-item active' : 'nav-item' }}"><a href="/blogs" class="nav-link">Blogs</a></li>
                     <li class="{{ Request::is('contact') ? 'nav-item active' : 'nav-item' }}"><a href="/contact" class="nav-link">Contact</a></li>
@@ -157,7 +157,7 @@
                             <li><a href="/"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
                             <li><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
                             @if (Auth::check() && Auth::user()->role == 'patient')
-                            <li><a href="/service/add"><span class="ion-ios-arrow-round-forward mr-2"></span>Checkup</a></li>
+                            <li><a href="/service/add"><span class="ion-ios-arrow-round-forward mr-2"></span>Check Up</a></li>
                             @endif
                             <li><a href="/blogs"><span class="ion-ios-arrow-round-forward mr-2"></span>Blogs</a></li>
                             <li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>

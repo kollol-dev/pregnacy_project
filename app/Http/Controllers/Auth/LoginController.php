@@ -105,39 +105,35 @@ class LoginController extends Controller
                 return redirect()->route($this->redirectAuth());
             }
             $now = new DateTime();
-            if (!isset($serivce)) {
-                return redirect()->route($this->redirectAuth());
-            }
-            $difference_in_weeks = floor($now->diff($service->created_at)->days / 7);
-
+            $difference_in_weeks = intval(ceil($now->diff($service->created_at)->days / 7));
 
             if ($difference_in_weeks + $service->pregnancy_week < 8) {
-                $week_remaining = 8 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 8 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             }
-            
+
             // if ($difference_in_weeks + $service->pregnancy_week < 12) {
             //     $week_remaining = 12 - $difference_in_weeks + $service->pregnancy_week;
             //     $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . $week_remaining > 1 ? 'weeks' : 'week'));
             // }
 
             else if ($difference_in_weeks + $service->pregnancy_week < 20) {
-                $week_remaining = 20 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 20 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             } else if ($difference_in_weeks + $service->pregnancy_week < 25) {
-                $week_remaining = 25 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 25 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             } else if ($difference_in_weeks + $service->pregnancy_week < 30) {
-                $week_remaining = 30 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 30 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             } else if ($difference_in_weeks + $service->pregnancy_week < 34) {
-                $week_remaining = 34 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 34 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             } else if ($difference_in_weeks + $service->pregnancy_week < 36) {
-                $week_remaining = 36 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 36 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             } else if ($difference_in_weeks + $service->pregnancy_week < 37) {
-                $week_remaining = 37 - $difference_in_weeks + $service->pregnancy_week;
+                $week_remaining = 37 - $difference_in_weeks - $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             }
 

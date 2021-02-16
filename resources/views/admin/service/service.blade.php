@@ -10,7 +10,7 @@
 <div class="content">
     <div class="module">
         <div class="module-head">
-            <h3>All Services</h3>
+            <h3>All Check Up Lists</h3>
         </div>
         <div class="module-body table">
             <table class="table table-striped">
