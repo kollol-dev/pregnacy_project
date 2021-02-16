@@ -14,26 +14,48 @@ class ServiceController extends Controller
     public function addService(Request $request)
     {
 
-        $this->validate($request, array(
-            'pregnancy_week'  => 'required | string',
-            'age'  => 'required | string',
-            'carrying_first_child'  => 'required | string',
-            'height'  => 'required | string',
-            'weight'  => 'required | string',
-            'bmi'  => 'required | string',
-            'bp'  => 'required | string',
-            'have_proteinuria'  => 'required | string',
-            'have_STI'  => 'required | string',
-            'have_heart_diseases'  => 'required | string',
-            'have_kidney_diseases'  => 'required | string',
-            'have_hypothyroidism'  => 'required | string',
-            'have_anemia'  => 'required | string',
-            'have_previous_miscarriage'  => 'required | string',
-            'have_previous_cs'  => 'required | string',
-            'is_carrying_twin_or_multiple'  => 'required | string',
-            'glucose_before_fasting'  => 'required | string',
-            'glucose_after_fasting'  => 'required | string',
-        ));
+
+        $prev_service = Service::where('patient_id', Auth::user()->id)->orderBy('id', 'desc')->first();
+        if (isset($prev_service)) {
+            $this->validate($request, array(
+                'pregnancy_week'  => 'required | string',
+                'age'  => 'required | string',
+                'weight'  => 'required | string',
+                'bmi'  => 'required | string',
+                'bp'  => 'required | string',
+                'have_proteinuria'  => 'required | string',
+                'have_STI'  => 'required | string',
+                'have_heart_diseases'  => 'required | string',
+                'have_kidney_diseases'  => 'required | string',
+                'have_hypothyroidism'  => 'required | string',
+                'have_anemia'  => 'required | string',
+                'glucose_before_fasting'  => 'required | string',
+                'glucose_after_fasting'  => 'required | string',
+            ));
+        } else {
+            $this->validate($request, array(
+                'pregnancy_week'  => 'required | string',
+                'age'  => 'required | string',
+                'carrying_first_child'  => 'required | string',
+                'height'  => 'required | string',
+                'weight'  => 'required | string',
+                'bmi'  => 'required | string',
+                'bp'  => 'required | string',
+                'have_proteinuria'  => 'required | string',
+                'have_STI'  => 'required | string',
+                'have_heart_diseases'  => 'required | string',
+                'have_kidney_diseases'  => 'required | string',
+                'have_hypothyroidism'  => 'required | string',
+                'have_anemia'  => 'required | string',
+                'have_previous_miscarriage'  => 'required | string',
+                'have_previous_cs'  => 'required | string',
+                'is_carrying_twin_or_multiple'  => 'required | string',
+                'glucose_before_fasting'  => 'required | string',
+                'glucose_after_fasting'  => 'required | string',
+            ));
+        }
+
+        $result = 'You have a very good condition in health. Please continue to take care of yourself. You might have a good possibliy of normal delivery.';
 
         // previous miscarriage  | previous CS  |  carrying twin or multiple babies
         if (

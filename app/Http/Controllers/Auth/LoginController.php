@@ -105,6 +105,9 @@ class LoginController extends Controller
                 return redirect()->route($this->redirectAuth());
             }
             $now = new DateTime();
+            if (!isset($serivce)) {
+                return redirect()->route($this->redirectAuth());
+            }
             $difference_in_weeks = floor($now->diff($service->created_at)->days / 7);
 
 
@@ -112,6 +115,7 @@ class LoginController extends Controller
                 $week_remaining = 8 - $difference_in_weeks + $service->pregnancy_week;
                 $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . ($week_remaining > 1 ? ' weeks' : ' week')));
             }
+            
             // if ($difference_in_weeks + $service->pregnancy_week < 12) {
             //     $week_remaining = 12 - $difference_in_weeks + $service->pregnancy_week;
             //     $user->notify(new CheckupAlert('Please do your check up in ' . $week_remaining . $week_remaining > 1 ? 'weeks' : 'week'));

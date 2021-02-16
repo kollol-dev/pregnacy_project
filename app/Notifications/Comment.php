@@ -10,52 +10,61 @@ use Illuminate\Notifications\Messages\MailMessage;
 class Comment extends Notification
 {
     use Queueable;
+    private $noti_text;
+    private $qid;
 
-    /**
-     * Create a new notification instance.
-     *
-     * @return void
-     */
-    public function __construct()
+
+    public function __construct($noti_text, $id)
     {
-        //
+        $this->noti_text = $noti_text;
+        $this->qid = $id;
     }
 
-    /**
-     * Get the notification's delivery channels.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
+
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
+        // return ['database', 'broadcast', 'mail];
     }
 
-    /**
-     * Get the mail representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
-     */
+
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->line('The introduction to the notification.')
+            ->action('Notification Action', url('/'))
+            ->line('Thank you for using our application!');
     }
 
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
     public function toArray($notifiable)
     {
+        $msg = "'<b>" . $this->noti_text . "</b>'";
         return [
-            //
+            'message' => $msg,
+            'link' => route('question-single', $this->qid)
+
+            // 'admin' => $notifiable,
+        ];
+    }
+
+    public function toDatabase($notifiable)
+    {
+        $msg = "'<b>" . $this->noti_text . "</b>'";
+        return [
+            'message' => $msg,
+            'link' => route('question-single', $this->qid)
+            // 'admin' => $notifiable,
+        ];
+    }
+
+    public function toBroadcast($notifiable)
+    {
+        $msg = "'<b>" . $this->noti_text . "</b>'";
+        return [
+            'message' => $msg,
+            'link' => route('question-single', $this->qid)
+
+            // 'admin' => $notifiable,
         ];
     }
 }

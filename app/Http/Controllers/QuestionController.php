@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 // models
+use App\Models\User;
 use App\Models\Question;
 use App\Models\QuestionComment;
 use App\Models\QuestionCommentReply;
+use App\Notifications\Comment;
 
 // helerps
 use Illuminate\Http\Request;
@@ -67,8 +69,16 @@ class QuestionController extends Controller
             'comment' => $request->comment
         ]);
 
-        
-        
+        $user_id = QuestionComment::where('question_id', $request->question_id)
+            ->where('user_id', '!=', Auth::user()->id)
+            ->first()->user_id;
+
+        if (!isset($user_id)) {
+            return redirect('/questions/single/' . $request->question_id);
+        }
+        $user = User::where('id', $user_id)->first();
+
+        $user->notify(new Comment('You have a new comment in your question', $user_id));
         return redirect('/questions/single/' . $request->question_id);
     }
 

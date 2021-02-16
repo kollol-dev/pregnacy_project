@@ -20,7 +20,7 @@ class DashboardController extends Controller
     public function index()
     {
         $doctors = User::where('role', 'doctor')->limit(10)->orderBy('id', 'desc')->get();
-        $patients = User::where('role', 'doctor')->limit(10)->orderBy('id', 'desc')->get();
+        $patients = User::where('role', 'patient')->limit(10)->orderBy('id', 'desc')->get();
         $blogs = Blog::limit(10)->orderBy('id', 'desc')->get();
 
         return view('admin.dashboard.index', compact(['doctors', 'patients', 'blogs']));

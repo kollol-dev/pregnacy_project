@@ -122,7 +122,7 @@
                     <li class="{{ Request::is('about') ? 'nav-item active' : 'nav-item' }}"><a href="/about" class="nav-link">About</a></li>
                     <li class="{{ Request::is('questions') ? 'nav-item active' : 'nav-item' }}"><a href="/questions" class="nav-link">Questions</a></li>
                     @if (Auth::check() && Auth::user()->role == 'patient')
-                    <li class="{{ Request::is('service') ? 'nav-item active' : 'nav-item' }}"><a href="/service/add" class="nav-link">Service</a></li>
+                    <li class="{{ Request::is('service/add') ? 'nav-item active' : 'nav-item' }}"><a href="/service/add" class="nav-link">Service</a></li>
                     @endif
                     <li class="{{ Request::is('blogs') ? 'nav-item active' : 'nav-item' }}"><a href="/blogs" class="nav-link">Blogs</a></li>
                     <li class="{{ Request::is('contact') ? 'nav-item active' : 'nav-item' }}"><a href="/contact" class="nav-link">Contact</a></li>

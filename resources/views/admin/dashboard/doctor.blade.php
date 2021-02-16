@@ -14,8 +14,8 @@
         </div>
         <div class="module-option clearfix">
             <div class="pull-right">
-                <button  class="btn btn-primary">
-                    <a href="/admin/dashboard/doctor/add">Add Doctor</a>
+                <button class="btn btn-primary">
+                    <a style="color:white;" href="/admin/dashboard/doctor/add">Add Doctor</a>
                 </button>
             </div>
 
@@ -37,45 +37,45 @@
                                     <label for="recipient-name" class="col-form-label">Name: *</label>
                                     <input type="text" name="name" class="form-control @error('name') is-invalid @enderror">
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Email: *</label>
                                     <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror">
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Password: *</label>
                                     <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror">
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Phone: *</label>
                                     <input type="text" name="phone" class="form-control  @error('phone') is-invalid @enderror">
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Address: *</label>
                                     <input type="text" name="address" class="form-control  @error('address') is-invalid @enderror">
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="modal-footer">
