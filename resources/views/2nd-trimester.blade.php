@@ -162,13 +162,17 @@
                 <p align="justify">
                     care provider is likely to put your mind at ease.
                 </p>
-                <ul>
-                    <li>
-                        <p align="center">
-                            <u><strong>Complications:</strong></u>
-                        </p>
-                    </li>
-                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftc-no-pb mt-3 mb-3">
+    <div class="container">
+        <div class="row no-gutters">
+
+            <button class="collapsible">Complications:</button>
+            <div class="content">
                 <p align="justify">
                     The second trimester is often when people feel their best during pregnancy.
                     Nausea and vomiting usually resolve, the risk of miscarriage has dropped,
@@ -728,7 +732,6 @@
                     started on the right treatment — which means a happy and healthy pregnancy
                     for you!
                 </p>
-
             </div>
         </div>
     </div>

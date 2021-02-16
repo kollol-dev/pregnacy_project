@@ -135,15 +135,7 @@
 
             <button class="collapsible">When to Visit Doctor:</button>
             <div class="content">
-
-                <ul class="mt-2">
-                    <li>
-                        <p align="center">
-                            <u><strong>Normal Changes</strong></u>
-                        </p>
-                    </li>
-                </ul>
-                <p align="justify">
+                <p align="justify mt-2">
                     The third trimester marks the home stretch, as you get ready for
                     the birth of your baby. The fetus continues to grow in weight and
                     size, and the body systems finish maturing. You may feel more
@@ -343,76 +335,14 @@
     </div>
 </section>
 
+
 <section class="ftco-section ftco-no-pt ftc-no-pb mt-3 mb-3">
     <div class="container">
         <div class="row no-gutters">
 
-            <button class="collapsible">Food Habits &amp; Life style:</button>
+            <button class="collapsible">Complications:</button>
             <div class="content">
                 <p align="justify mt-2">
-                    During the second and third trimester prenatal visits, your
-                    healthcare provider or midwife may check the following things.
-                    Exactly what they check depends on your current health condition
-                    and the health of the fetus:
-                </p>
-                <ul>
-                    <li>
-                        <p align="justify">
-                            Any current symptoms or discomforts
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Your weight
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Your blood pressure
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Your urine for a protein called albumin that may be a sign
-                            of preeclampsia or toxemia, and sugar that may be a sign of
-                            hyperglycemia
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Position, growth, and development of the fetus
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Height of the top of the uterus (fundus)
-                        </p>
-                    </li>
-                    <li>
-                        <p align="justify">
-                            Fetal heartbeat
-                        </p>
-                    </li>
-                </ul>
-                <p align="justify">
-                    As you start the third trimester, your healthcare provider or
-                    midwife may change the schedule of your prenatal visits from every
-                    month to every 2 weeks. Your visits may be scheduled once every
-                    week in the last month. This schedule will be based on your health
-                    condition, the growth and development of the fetus, and your
-                    provider's or midwife's preference.
-                </p>
-                <p align="justify">
-                    At about the 38th week of the pregnancy, your provider will do a
-                    pelvic exam to find out the dilation and effacement of the cervix.
-                    Your provider or midwife will ask about any contractions. He or she
-                    will also talk with you about labor and delivery procedures.
-                </p>
-                <p align="justify">
-                    <u><strong>#</strong></u>
-                    <u><strong>Complications</strong></u>
-                </p>
-                <p align="justify">
                     Weeks 28 through 40 bring the arrival of the third trimester. This
                     exciting time is definitely the home stretch for expectant mothers,
                     but it’s also a time when complications can occur. Just as the
@@ -1642,6 +1572,74 @@
     </div>
 </section>
 
+<section class="ftco-section ftco-no-pt ftc-no-pb mt-3 mb-3">
+    <div class="container">
+        <div class="row no-gutters">
+
+            <button class="collapsible">Food Habits &amp; Life style:</button>
+            <div class="content">
+                <p align="justify mt-2">
+                    During the second and third trimester prenatal visits, your
+                    healthcare provider or midwife may check the following things.
+                    Exactly what they check depends on your current health condition
+                    and the health of the fetus:
+                </p>
+                <ul>
+                    <li>
+                        <p align="justify">
+                            Any current symptoms or discomforts
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Your weight
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Your blood pressure
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Your urine for a protein called albumin that may be a sign
+                            of preeclampsia or toxemia, and sugar that may be a sign of
+                            hyperglycemia
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Position, growth, and development of the fetus
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Height of the top of the uterus (fundus)
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">
+                            Fetal heartbeat
+                        </p>
+                    </li>
+                </ul>
+                <p align="justify">
+                    As you start the third trimester, your healthcare provider or
+                    midwife may change the schedule of your prenatal visits from every
+                    month to every 2 weeks. Your visits may be scheduled once every
+                    week in the last month. This schedule will be based on your health
+                    condition, the growth and development of the fetus, and your
+                    provider's or midwife's preference.
+                </p>
+                <p align="justify">
+                    At about the 38th week of the pregnancy, your provider will do a
+                    pelvic exam to find out the dilation and effacement of the cervix.
+                    Your provider or midwife will ask about any contractions. He or she
+                    will also talk with you about labor and delivery procedures.
+                </p>
+            </div>
+        </div>
+</section>
 
 <style>
     .collapsible {

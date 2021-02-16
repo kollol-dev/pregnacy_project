@@ -67,12 +67,19 @@
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">Your first visit will focus on assessing your overall health, identifying any risk factors and determining your baby's gestational age. Your health care provider will ask detailed questions about your health history. Be honest. If you're uncomfortable discussing your health history in front of your partner, schedule a private consultation. Also expect to learn about first trimester screening for chromosomal abnormalities.</span></span></p>
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">After the first visit, you'll probably be asked to schedule checkups every four weeks for the first 32 weeks of pregnancy. However, you may require more or less frequent appointments, depending on your health and medical history.</span></span></p>
                 <p align="justify">&nbsp;</p>
-                <ul>
-                    <li>
-                        <p align="center"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>Complecations:</strong></u></span></span></p>
-                    </li>
-                </ul>
-                <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>1. Vaginal Bleeding </strong></u></span></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-no-pt ftc-no-pb mt-3 mb-3">
+    <div class="container">
+        <div class="row no-gutters">
+
+            <button class="collapsible">Complications:</button>
+            <div class="content">
+                <p align="justify mt-2"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>1. Vaginal Bleeding </strong></u></span></span></p>
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-size: large;">"If you have bleeding and bad cramping similar to period&nbsp;</span><span style="font-size: large;"><strong>cramps</strong></span><span style="font-size: large;">, this can be a sign of threatened&nbsp;</span><span style="font-size: large;"><strong>miscarriage</strong></span><span style="font-size: large;">. If this is coupled with sharp, lower&nbsp;</span><span style="font-size: large;"><strong>abdominal pain</strong></span><span style="font-size: large;">, it may be a sign of&nbsp;</span><span style="font-size: large;"><strong>ectopic pregnancy</strong></span><span style="font-size: large;">," a serious complication that occurs when the fertilized egg implants outside the uterus, usually in the fallopian tubes.</span></span></span></p>
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-size: large;"><strong>What to do</strong></span><span style="font-size: large;">: "Call your doctor. Your doctor will likely do an&nbsp;</span><span style="font-size: large;"><strong>ultrasound</strong></span><span style="font-size: large;">, an exam, and some&nbsp;</span><span style="font-size: large;"><strong>blood</strong></span><span style="font-size: large;">&nbsp;work based on your symptoms. Though most spotting or light bleeding may not be a serious problem, "you don&rsquo;t want to ignore it if it is associated with cramping, heavy bleeding, or&nbsp;</span><span style="font-size: large;"><strong>abdominal pain</strong></span><span style="font-size: large;">."</span></span></span></p>
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-size: large;"><u>2. Excessive Nausea and Vomiting</u></span></span></span></p>
@@ -96,7 +103,6 @@
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-size: large;">Women who have certain pre-existing medical conditions -- such as&nbsp;</span><span style="font-size: large;"><strong>thyroid</strong></span><span style="font-size: large;">&nbsp;disease,&nbsp;</span><span style="font-size: large;"><strong>diabetes</strong></span><span style="font-size: large;">,&nbsp;</span><span style="font-size: large;"><strong>high blood pressure</strong></span><span style="font-size: large;">,&nbsp;</span><span style="font-size: large;"><strong>asthma</strong></span><span style="font-size: large;">, and/or&nbsp;</span><span style="font-size: large;"><strong>lupus</strong></span><span style="font-size: large;">&nbsp;-- should note any changes in their condition during pregnancy.</span><span style="font-size: large;"><strong>&nbsp;</strong></span><span style="font-size: large;">If your underlying disease is flaring up or not well-controlled, it can have serious consequences for your health -- and your baby's.</span></span></span></p>
                 <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-size: large;">For example, if your&nbsp;</span><span style="font-size: large;"><strong>thyroid</strong></span><span style="font-size: large;">&nbsp;hormone is too high or low, you can be at an increased risk of miscarriage or if your&nbsp;</span><span style="font-size: large;"><strong>blood sugar levels</strong></span><span style="font-size: large;">&nbsp;are not tightly controlled, you may be at increased risk of miscarriage or fetal abnormalities. </span></span></span></p>
 
-
             </div>
         </div>
     </div>
@@ -108,12 +114,7 @@
 
             <button class="collapsible">Food Habits &amp; Life style:</button>
             <div class="content">
-                <ul>
-                    <li>
-                        <p align="center"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;"><u><strong>Food Habits &amp; Life style:</strong></u></span></span></p>
-                    </li>
-                </ul>
-                <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">To help relieve nausea, avoid having an empty stomach. Eat slowly and in small amounts every one to two hours. Choose foods that are low in fat. Avoid foods or smells that make your nausea worse. Drink plenty of fluids. Foods containing ginger might help. Contact your health care provider if your nausea and vomiting is severe. Rest as much as you can. A healthy diet and exercise might increase your energy. To prevent heartburn, eat small, frequent meals and avoid fried foods, citrus fruits, chocolate, and spicy or fried foods. To prevent or relieve constipation, include plenty of fiber in your diet and drink lots of fluids, especially water and prune or other fruit juices. Regular physical activity also helps.</span></span></p>
+                <p align="justify mt-2"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">To help relieve nausea, avoid having an empty stomach. Eat slowly and in small amounts every one to two hours. Choose foods that are low in fat. Avoid foods or smells that make your nausea worse. Drink plenty of fluids. Foods containing ginger might help. Contact your health care provider if your nausea and vomiting is severe. Rest as much as you can. A healthy diet and exercise might increase your energy. To prevent heartburn, eat small, frequent meals and avoid fried foods, citrus fruits, chocolate, and spicy or fried foods. To prevent or relieve constipation, include plenty of fiber in your diet and drink lots of fluids, especially water and prune or other fruit juices. Regular physical activity also helps.</span></span></p>
                 <ul>
                     <li>
                         <p align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: large;">Pregnancy might leave you feeling delighted, anxious, exhilarated and exhausted &mdash; sometimes all at once. Even if you're thrilled about being pregnant, a new baby adds emotional stress to your life.</span></span></p>
