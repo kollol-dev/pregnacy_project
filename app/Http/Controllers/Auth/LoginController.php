@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Auth;
 use App\Notifications\CheckupAlert;
+use App\Models\User;
 use App\Models\Service;
 
 use Illuminate\Http\Request;
@@ -82,6 +83,17 @@ class LoginController extends Controller
             'password' => 'required | string | min:8',
         ));
 
+        $check = User::where('email', '=', $request->email)->count();
+
+        if ($check == 0) {
+            return redirect()->back()->withInput()
+                ->withErrors(
+                    [
+                        'email' => 'Wrong email',
+                    ],
+                );;
+        }
+
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
 
@@ -142,7 +154,11 @@ class LoginController extends Controller
             return redirect()->route($this->redirectAuth());
         } else {
             // toast('Does not match login Credentials', 'error')->autoClose(2000)->timerProgressBar();
-            return redirect()->back();
+            return redirect()->back()->withInput()->withErrors(
+                [
+                    'password' => 'Wrong Password',
+                ],
+            );
         }
     }
 }

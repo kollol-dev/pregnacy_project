@@ -69,16 +69,23 @@ class QuestionController extends Controller
             'comment' => $request->comment
         ]);
 
-        $user_id = QuestionComment::where('question_id', $request->question_id)
+        $user = QuestionComment::where('question_id', $request->question_id)
             ->where('user_id', '!=', Auth::user()->id)
-            ->first()->user_id;
+            ->first();
 
-        if (!isset($user_id)) {
+        if (!isset($user)) {
+            $qst = Question::where('id', $request->question_id)
+                ->first();
+            if (Auth::user()->id == $qst->user_id) {
+                return redirect('/questions/single/' . $request->question_id);
+            }
+            $user = User::where('id', $qst->user_id)->first();
+            $user->notify(new Comment('You have a new comment in your question', $qst->user_id));
             return redirect('/questions/single/' . $request->question_id);
         }
-        $user = User::where('id', $user_id)->first();
+        $user = User::where('id', $user->id)->first();
 
-        $user->notify(new Comment('You have a new comment in your question', $user_id));
+        $user->notify(new Comment('You have a new comment in your question', $user->id));
         return redirect('/questions/single/' . $request->question_id);
     }
 

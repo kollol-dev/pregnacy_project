@@ -95,7 +95,7 @@ class ServiceController extends Controller
 
         // height < 150cm
         if ($request->height < 150) {
-            $result = "Shorter mothers have shorter pregnancies, smaller babies, and higher risk for a preterm birth. Investigators found that a mother's height directly influences her risk for preterm birth 'at risk' of cephalopelvic disproportion (CPD). You are at risk of failing spontaneous vaginal delivery and should be referred to hospitals where labor could be closely monitored and cesarean section performed if necessary";
+            $result = $result . "Shorter mothers have shorter pregnancies, smaller babies, and higher risk for a preterm birth. Investigators found that a mother's height directly influences her risk for preterm birth 'at risk' of cephalopelvic disproportion (CPD). You are at risk of failing spontaneous vaginal delivery and should be referred to hospitals where labor could be closely monitored and cesarean section performed if necessary";
         }
 
 
@@ -104,16 +104,15 @@ class ServiceController extends Controller
         // eclampsia
         // pregnancy_week 20-40 | age 17-35 | carrying_first_child | BMI 18-25 | Bp > 120/80 | have proteinria
         if (
-            ($request->pregnancy_week > 24 && $request->pregnancy_week < 41) &&
+            ($request->pregnancy_week > 20 && $request->pregnancy_week < 41) &&
             ($request->age > 17 && $request->age < 35) &&
-            ($request->bmi < 18  || $request->bmi > 25) &&
+            ($request->bmi < 18  && $request->bmi > 25) &&
             $request->bp == '>120/80'  &&
             $request->carrying_first_child == 'yes'  &&
             $request->have_proteinuria == 'yes'
         ) {
             $result = 'Since you are now 2nd trimester, you have high blood pressure, you have proteinuria so, you have high risk to eclampsia. ';
         }
-
 
 
         $service = Service::create([

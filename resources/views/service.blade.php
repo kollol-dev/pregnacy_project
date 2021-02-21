@@ -28,17 +28,28 @@
 
                         <div class="form-group">
                             <label>You are now pregnant in week *</label>
+                            @if(isset($service->pregnancy_week))
+                            @php
+                            $now = new DateTime();
+                            $difference_in_weeks = intval(ceil($now->diff($service->created_at)->days / 7));
+                            $val = $difference_in_weeks + $service->pregnancy_week
+                            @endphp
+                            <input type="number" value="{{ $val }}" disabled class="form-control @error('pregnancy_week') is-invalid @enderror">
+                            @else
                             <input type="number" value="{{ (optional($service)->pregnancy_week) ?  optional($service)->pregnancy_week : old('pregnancy_week') }}" name="pregnancy_week" class="form-control @error('pregnancy_week') is-invalid @enderror">
+                            @endif
                         </div>
                         @error('pregnancy_week')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
+                        @if(!isset($service->age))
                         <div class="form-group">
                             <label>Your Age *</label>
                             <input type="number" value="{{ (optional($service)->age) ?  optional($service)->age : old('age') }}" name="age" class="form-control @error('age') is-invalid @enderror">
                         </div>
+                        @endif
                         @error('age')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -79,10 +90,12 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
+                        @if(!isset($service->bmi))
                         <div class="form-group">
                             <label>Your BMI (before pregnancy) *</label>
                             <input type="text" value="{{ (optional($service)->bmi) ?  optional($service)->bmi : old('bmi') }}" name="bmi" class="form-control @error('bmi') is-invalid @enderror">
                         </div>
+                        @endif
                         @error('bmi')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
