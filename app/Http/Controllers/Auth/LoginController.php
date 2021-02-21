@@ -91,7 +91,7 @@ class LoginController extends Controller
                     [
                         'email' => 'Wrong email',
                     ],
-                );;
+                );
         }
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {

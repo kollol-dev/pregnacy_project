@@ -17,6 +17,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Date</th>
                         <th>Patient's Name</th>
                         <th>Result</th>
                         <th>Action</th>
@@ -26,6 +27,7 @@
                     @foreach ($services as $service)
                     <tr>
                         <td>{{ $service->id }}</td>
+                        <td>{{ $service->created_at }}</td>
                         <td>{{ isset($service->patient) ? $service->patient->name : 'N/A'}}</td>
                         <td>{{ $service->result }}</td>
                         <td>

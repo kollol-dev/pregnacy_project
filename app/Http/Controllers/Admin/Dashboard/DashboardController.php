@@ -144,7 +144,9 @@ class DashboardController extends Controller
 
     public function getServices()
     {
-        $services = Service::with('patient')->get();
+        $services = Service::with('patient')->orderBy('id', 'desc')->get();
+
+        // return $services;
         return view('admin.service.service', compact(['services']));
     }
 }

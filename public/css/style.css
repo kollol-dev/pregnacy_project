@@ -2724,7 +2724,10 @@ input[type="button"].btn-block {
     background-color: transparent; }
 
 .dropdown-menu.show {
-  display: block; }
+  display: block; 
+  overflow-y: scroll; 
+  padding: 15px;
+}
 
 .dropdown-header {
   display: block;
@@ -8965,7 +8968,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 14px;
   background: #141313;
-  padding: 6em 0; }
+  padding: 50px 0; }
   .ftco-footer .ftco-footer-widget {
     width: 100%;
     display: block; }

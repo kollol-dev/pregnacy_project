@@ -10,7 +10,7 @@
 <div class="content">
     <div class="pull-right">
         <button  class="btn btn-primary">
-            <a href="/admin/blog/add">Add Blog</a>
+            <a style="color:white;" href="/admin/blog/add">Add Blog</a>
         </button>
     </div>
     <div class="module-body table">

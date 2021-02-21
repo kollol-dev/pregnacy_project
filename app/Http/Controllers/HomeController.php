@@ -98,7 +98,7 @@ class HomeController extends Controller
         if (!Auth::check()) {
             return redirect('/login');
         }
-        $services = Service::where('patient_id', Auth::user()->id)->get();
+        $services = Service::where('patient_id', Auth::user()->id)->orderBy('id', 'desc')->get();
         return view('service-profile')->with('services', $services);
     }
 
@@ -119,4 +119,5 @@ class HomeController extends Controller
     {
         return view('3rd-trimester');
     }
+
 }

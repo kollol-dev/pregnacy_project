@@ -19,8 +19,8 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
+                        <!-- <th>Phone</th>
+                        <th>Address</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -29,8 +29,8 @@
                         <td>{{ $patient->id }}</td>
                         <td>{{ $patient->name }}</td>
                         <td>{{ $patient->email }}</td>
-                        <td>{{ isset($patient->phone) ? $patient->phone : 'N/A' }}</td>
-                        <td>{{ isset($patient->address) ? $patient->address : 'N/A' }}</td>
+                        <!-- <td>{{ isset($patient->phone) ? $patient->phone : 'N/A' }}</td>
+                        <td>{{ isset($patient->address) ? $patient->address : 'N/A' }}</td> -->
                     </tr>
                     @endforeach
                 </tbody>
